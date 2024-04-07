@@ -1,9 +1,24 @@
 $# LS-DYNA Keyword file created by LS-PrePost(R) V4.10.5-23Jun2023
-$# Created on Apr-8-2024 (00:54:33)
+$# Created on Apr-8-2024 (01:14:55)
 *KEYWORD
 *TITLE
 $#                                                                         title
 LS-DYNA keyword deck by LS-PrePost
+*CONTROL_TERMINATION
+1.00000E-6         0       0.0       0.01.000000E8         0
+*CONTROL_TIMESTEP
+       0.0       0.0         0       0.0       0.0         4         0         0
+*DATABASE_BINARY_D3PLOT
+       0.0         4         0         0         0
+*BOUNDARY_SPC_SET_BIRTH_DEATH
+         1         0         0         0         0         0         0         0
+       0.01.00000E20
+*MAT_ELASTIC
+         1       0.0       0.0       0.0       0.0       0.0       0.0
+*MAT_RIGID
+         2       0.0       0.0       0.0       0.0       0.0       0.0          
+       0.0         0         0
+       0.0       0.0       0.0       0.0       0.0       0.0
 *PART
 Top Augment - Solid
          1         0         0         0         0         0         0         0
@@ -37,6 +52,8 @@ First Rail Connector
 *PART
 Last Rail Connector
         11         0         0         0         0         0         0         0
+*DEFINE_CURVE
+         4         0       1.0       1.0       0.0       0.0         0         0
 *ELEMENT_SOLID
      985       1    1977    1978    1979    1980      10      13      15      11
      986       1    1981    1982    1983    1984      18    1546       3      19
@@ -20149,4 +20166,29 @@ Last Rail Connector
    15588            -2.0           -19.0             1.0       0       0
    15589            14.0           -19.0            -1.0       0       0
    15590            14.0           -19.0             1.0       0       0
+*SECTION_SOLID
+         1         1         0                                     0.0       0.0
+*EM_CONTROL
+        -1       100       0.0         0         2                   3         3
+*EM_CONTROL_CONTACT
+         1         0         0         0       0.3       0.3       0.3       0.0
+*EM_DATABASE_CIRCUIT
+         1       0.0
+*EM_DATABASE_GLOBALENERGY
+         1       0.0
+*EM_DATABASE_PARTDATA
+         1       0.0
+*EM_OUTPUT
+         0         0         0         0         0         1         0
+*EM_SOLVER_BEM
+1.00000E-6      1000         2         2         1      1000
+*EM_SOLVER_BEMMAT
+         1                                                            1.00000E-6
+*EM_SOLVER_FEM
+1.00000E-6      1000         1         1         1      5000
+*EM_MAT_001
+         1         0       0.0         0                 0.01.00000E28         0
+*EM_CIRCUIT
+         1         1         0       0.0       0.0       0.0       0.0       0.0
+         0         0         0         0
 *END
