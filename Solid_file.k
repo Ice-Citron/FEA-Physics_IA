@@ -1,5 +1,5 @@
 $# LS-DYNA Keyword file created by LS-PrePost(R) V4.10.5-23Jun2023
-$# Created on Apr-8-2024 (21:12:04)
+$# Created on Apr-8-2024 (21:36:16)
 *KEYWORD
 *TITLE
 $#                                                                         title
@@ -20340,27 +20340,6 @@ $#   nid               x               y               z      tc      rc
    15588            -2.0           -19.0             1.0       0       0
    15589            14.0           -19.0            -1.0       0       0
    15590            14.0           -19.0             1.0       0       0
-   28259            40.0    9.536743e-07             1.1       0       0
-   28260            40.4    9.536743e-07             1.1       0       0
-   28261            40.8    9.536743e-07             1.1       0       0
-   28262            40.8    9.536743e-07            -1.1       0       0
-   28263            40.4    9.536743e-07            -1.1       0       0
-   28264            40.0    9.536743e-07            -1.1       0       0
-   28265            40.0    9.536743e-07       0.7333334       0       0
-   28266            40.0    9.536743e-07       0.3666667       0       0
-   28267            40.0    9.536743e-07    1.110223e-16       0       0
-   28268            40.0    9.536743e-07      -0.3666667       0       0
-   28269            40.0    9.536743e-07      -0.7333334       0       0
-   28270            40.4    9.536743e-07      -0.7314958       0       0
-   28271            40.4    9.536743e-07      -0.3636992       0       0
-   28272            40.4    9.536743e-07       0.0031621       0       0
-   28273            40.4    9.536743e-07       0.3692811       0       0
-   28274            40.4    9.536743e-07       0.7346937       0       0
-   28275            40.8    9.536743e-07      -0.7298304       0       0
-   28276            40.8    9.536743e-07       0.7361521       0       0
-   28277            40.8    9.536743e-07      -0.3612625       0       0
-   28278            40.8    9.536743e-07       0.0059874       0       0
-   28279            40.8    9.536743e-07       0.3714534       0       0
 *SET_SEGMENT_TITLE
 Input Current
 $#     sid       da1       da2       da3       da4    solver       its         -
@@ -20436,6 +20415,9 @@ $#  reltol    maxite     stype    precon   uselast  ncyclfem
 *EM_SOLVER_BEMMAT
 $#   matid    unused    unused    unused    unused    unused    unused    reltol
          2                                                            1.00000E-6
+*EM_CONTROL_TIMESTEP
+$#  tstype    dtcons      lcid    factor     tsmin     tsmas     rlcsf    mecats
+         15.00000E-6         0       1.0       0.0       0.0        25         0
 *EM_MAT_001
 $#     mid     mtype     sigma     eosid    unused  eplambda    deatht   rdltype
          1         2      25.0         0                 0.01.00000E28         0
@@ -20445,6 +20427,30 @@ $#     mid     mtype     sigma     eosid    unused  eplambda    deatht   rdltype
 *EM_MAT_001
 $#     mid     mtype     sigma     eosid    unused  eplambda    deatht   rdltype
          3         2      25.0         0                 0.01.00000E28         0
+*EM_MAT_001
+$#     mid     mtype     sigma     eosid    unused  eplambda    deatht   rdltype
+         4         2      25.0         0                 0.01.00000E28         0
+*EM_MAT_001
+$#     mid     mtype     sigma     eosid    unused  eplambda    deatht   rdltype
+         5         2      25.0         0                 0.01.00000E28         0
+*EM_MAT_001
+$#     mid     mtype     sigma     eosid    unused  eplambda    deatht   rdltype
+         6         2      25.0         0                 0.01.00000E28         0
+*EM_MAT_001
+$#     mid     mtype     sigma     eosid    unused  eplambda    deatht   rdltype
+         7         2      25.0         0                 0.01.00000E28         0
+*EM_MAT_001
+$#     mid     mtype     sigma     eosid    unused  eplambda    deatht   rdltype
+         8         2      25.0         0                 0.01.00000E28         0
+*EM_MAT_001
+$#     mid     mtype     sigma     eosid    unused  eplambda    deatht   rdltype
+         9         2      25.0         0                 0.01.00000E28         0
+*EM_MAT_001
+$#     mid     mtype     sigma     eosid    unused  eplambda    deatht   rdltype
+        10         2      25.0         0                 0.01.00000E28         0
+*EM_MAT_001
+$#     mid     mtype     sigma     eosid    unused  eplambda    deatht   rdltype
+        11         2      25.0         0                 0.01.00000E28         0
 *EM_CIRCUIT
 $#  circid   circtyp      lcid       r/f       l/a      c/t0        v0        t0
          1         1         4       0.0       0.0       0.0       0.0       0.0
