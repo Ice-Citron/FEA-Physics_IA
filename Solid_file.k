@@ -1,27 +1,27 @@
 $# LS-DYNA Keyword file created by LS-PrePost(R) V4.10.5-23Jun2023
-$# Created on Apr-8-2024 (18:43:16)
+$# Created on Apr-8-2024 (20:10:06)
 *KEYWORD
 *TITLE
 $#                                                                         title
 LS-DYNA keyword deck by LS-PrePost
 *CONTROL_TERMINATION
 $#  endtim    endcyc     dtmin    endeng    endmas     nosol
-1.00000E-6         0       0.0       0.01.000000E8         0
+3.00000E-4         0       0.0       0.01.000000E8         0
 *CONTROL_TIMESTEP
 $#  dtinit    tssfac      isdo    tslimt     dt2ms      lctm     erode     ms1st
-       0.0       0.0         0       0.0       0.0         4         0         0
+       0.0       0.0         0       0.0       0.0         5         0         0
 *DATABASE_BINARY_D3PLOT
 $#      dt      lcdt      beam     npltc    psetid
-       0.0         4         0         0         0
+5.00000E-6         0         0         0         0
 *BOUNDARY_SPC_SET_BIRTH_DEATH
 $#    nsid       cid      dofx      dofy      dofz     dofrx     dofry     dofrz
-         1         0         0         0         0         0         0         0
+         1         0         0         0         1         1         1         0
 $#   birth     death
-       0.01.00000E20
+       0.0       0.0
 *SET_NODE_LIST_TITLE
 NODESET(SPC) 1
 $#     sid       da1       da2       da3       da4    solver       its         -
-         1       0.0       0.0       0.0       0.0MECH      1                  
+         1       0.0       0.0       0.0       0.0MECH      1                   
 $#    nid1      nid2      nid3      nid4      nid5      nid6      nid7      nid8
      12885     12886     12887     12888     12889     12890     12891     12892
      12893     12894     12895     12896     12897     12898     12899     12900
@@ -46,14 +46,54 @@ $#    nid1      nid2      nid3      nid4      nid5      nid6      nid7      nid8
      13045     13046     13047     13048     13049     13050     13051     13052
      13053     13054     13055     13056     13057     13058     13059     13060
      13061     13062     13063     13064     13065     13066         0         0
+*BOUNDARY_SPC_SET_BIRTH_DEATH
+$#    nsid       cid      dofx      dofy      dofz     dofrx     dofry     dofrz
+         2         0         0         0         1         1         1         0
+$#   birth     death
+       0.0       0.0
+*SET_NODE_LIST_TITLE
+NODESET(SPC) 2
+$#     sid       da1       da2       da3       da4    solver       its         -
+         2       0.0       0.0       0.0       0.0MECH      1                   
+$#    nid1      nid2      nid3      nid4      nid5      nid6      nid7      nid8
+     12129     12130     12131     12132     12133     12134     12135     12136
+     12137     12138     12139     12140     12141     12142     12143     12144
+     12145     12146     12147     12148     12149     12150     12151     12152
+     12153     12154     13209     13210     13211     13212     13213     13214
+     13215     13216     13217     13218     13219     13220     13221     13222
+     13298     13299     13300     13301     13302     13303     13304     13305
+     13306     13307     13308     13309     13325     13326     13327     13328
+     13329     13355     13356     13357     13358     13359     13360     13361
+     13362     13363     13364     13365     13366     13367     13368     13369
+     13370     13371     13372     13373     13374     13375     13376     13377
+     13378     13379     13380     13381     13382     13383     13384     13385
+     13386     13387     13388     13389     13390     13391     13392     13393
+     13394     13395     13396     13397     13398     13399     13400     13401
+     13402     13403     13404     13405     13406     13407     13408     13409
+     13410     13411     13412     13413     13414     13415     13416     13417
+     13418     13419     13420     13421     13422     13423     13424     13425
+     13426     13427     13428     13429     13430     13431     13432     13433
+     13434     13435     13436     13437     13438     13439     13440     13441
+     13442     13443     13444     13445     13446     13447     13448     13449
+     13450     13451     13452     13453     13454     13455     13456     13457
+     13458     13459     13460     13461     13462     13463     13464     13465
+     13466     13467     13468     13469     13470     13471     13472     13473
+     13474     13475     13476     13477     13478     13479         0         0
 *MAT_ELASTIC
 $#     mid        ro         e        pr        da        db  not used
-         1       0.0       0.0       0.0       0.0       0.0       0.0
+         1   0.002649.70000E10      0.31       0.0       0.0       0.0
 *MAT_RIGID
 $#     mid        ro         e        pr         n    couple         m     alias
-         2       0.0       0.0       0.0       0.0       0.0       0.0          
+         2   0.002649.70000E10      0.31       0.0       0.0       0.0          
 $#     cmo      con1      con2
-       0.0         0         0
+       1.0         7         7
+$#lco or a1        a2        a3        v1        v2        v3
+       0.0       0.0       0.0       0.0       0.0       0.0
+*MAT_RIGID
+$#     mid        ro         e        pr         n    couple         m     alias
+         3   0.002649.70000E10      0.31       0.0       0.0       0.0          
+$#     cmo      con1      con2
+       1.0         7         7
 $#lco or a1        a2        a3        v1        v2        v3
        0.0       0.0       0.0       0.0       0.0       0.0
 *PART
@@ -113,7 +153,20 @@ $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
         11         0         0         0         0         0         0         0
 *DEFINE_CURVE
 $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
-         4         0       1.0       1.0       0.0       0.0         0         0
+         4         0     0.001   1000000       0.0       0.0         0         0
+$#                a1                  o1
+                 0.0               800.0
+                 0.2               294.3
+                 0.4              108.26
+                 0.6              39.829
+                 0.8              14.652
+                 1.0              5.3903
+*DEFINE_CURVE
+$#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
+         5         0       1.0       1.0       0.0       0.0         0         0
+$#                a1                  o1
+                 0.0    4.9999998737e-06
+    3.0000001425e-04    4.9999998737e-06
 *ELEMENT_SOLID
 $#   eid     pid      n1      n2      n3      n4      n5      n6      n7      n8
      985       1    1977    1978    1979    1980      10      13      15      11
@@ -20252,34 +20305,6 @@ $#   nid               x               y               z      tc      rc
 *SECTION_SOLID
 $#   secid    elform       aet    unused    unused    unused    cohoff   gaskeit
          1         1         0                                     0.0       0.0
-*SET_NODE_LIST_TITLE
-NODESET(SPC) 2 
-$#     sid       da1       da2       da3       da4    solver       its         -
-         2       0.0       0.0       0.0       0.0MECH      1                  
-$#    nid1      nid2      nid3      nid4      nid5      nid6      nid7      nid8
-     12129     12130     12131     12132     12133     12134     12135     12136
-     12137     12138     12139     12140     12141     12142     12143     12144
-     12145     12146     12147     12148     12149     12150     12151     12152
-     12153     12154     13209     13210     13211     13212     13213     13214
-     13215     13216     13217     13218     13219     13220     13221     13222
-     13298     13299     13300     13301     13302     13303     13304     13305
-     13306     13307     13308     13309     13325     13326     13327     13328
-     13329     13355     13356     13357     13358     13359     13360     13361
-     13362     13363     13364     13365     13366     13367     13368     13369
-     13370     13371     13372     13373     13374     13375     13376     13377
-     13378     13379     13380     13381     13382     13383     13384     13385
-     13386     13387     13388     13389     13390     13391     13392     13393
-     13394     13395     13396     13397     13398     13399     13400     13401
-     13402     13403     13404     13405     13406     13407     13408     13409
-     13410     13411     13412     13413     13414     13415     13416     13417
-     13418     13419     13420     13421     13422     13423     13424     13425
-     13426     13427     13428     13429     13430     13431     13432     13433
-     13434     13435     13436     13437     13438     13439     13440     13441
-     13442     13443     13444     13445     13446     13447     13448     13449
-     13450     13451     13452     13453     13454     13455     13456     13457
-     13458     13459     13460     13461     13462     13463     13464     13465
-     13466     13467     13468     13469     13470     13471     13472     13473
-     13474     13475     13476     13477     13478     13479         0         0
 *SET_SEGMENT_TITLE
 Input Current
 $#     sid       da1       da2       da3       da4    solver       its         -
@@ -20327,7 +20352,7 @@ $#      n1        n2        n3        n4        a1        a2        a3        a4
      28274     28273     28279     28276       0.0       0.0       0.0       0.0
 *EM_CONTROL
 $#   emsol     numls   macrodt   dimtype    nperio         -   ncylfem   ncylbem
-        -1       100       0.0         0         2                   3         3
+         1       100       0.0         0         2                5000      5000
 *EM_CONTROL_CONTACT
 $#    emct    cconly     ctype    cotype      eps1      eps2      eps3        d0
          1         0         0         0       0.3       0.3       0.3       0.0
@@ -20342,7 +20367,7 @@ $#   outlv     dtout
          1       0.0
 *EM_OUTPUT
 $#    mats      matf      sols      solf      mesh       mem    timing
-         0         0         0         0         0         1         0
+         2         2         2         2         1         1         1
 *EM_SOLVER_BEM
 $#  reltol    maxite     stype    precon   uselast  ncyclbem
 1.00000E-6      1000         2         2         1      1000
@@ -20354,10 +20379,16 @@ $#  reltol    maxite     stype    precon   uselast  ncyclfem
 1.00000E-6      1000         1         1         1      5000
 *EM_MAT_001
 $#     mid     mtype     sigma     eosid    unused  eplambda    deatht   rdltype
-         1         0       0.0         0                 0.01.00000E28         0
+         1         2      25.0         0                 0.01.00000E28         0
+*EM_MAT_001
+$#     mid     mtype     sigma     eosid    unused  eplambda    deatht   rdltype
+         2         2      25.0         0                 0.01.00000E28         0
+*EM_MAT_001
+$#     mid     mtype     sigma     eosid    unused  eplambda    deatht   rdltype
+         3         2      25.0         0                 0.01.00000E28         0
 *EM_CIRCUIT
 $#  circid   circtyp      lcid       r/f       l/a      c/t0        v0        t0
-         1         1         0       0.0       0.0       0.0       0.0       0.0
+         1         1         4       0.0       0.0       0.0       0.0       0.0
 $# sidcurr    sidvin   sidvout    partid
-         0         0         0         0
+         3         1         2         0
 *END
