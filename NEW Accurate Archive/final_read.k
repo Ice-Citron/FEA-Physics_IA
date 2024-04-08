@@ -1,5 +1,5 @@
 $# LS-DYNA Keyword file created by LS-PrePost(R) V4.10.5-23Jun2023
-$# Created on Apr-9-2024 (02:23:42)
+$# Created on Apr-9-2024 (03:06:27)
 *KEYWORD
 *TITLE
 $#                                                                         title
@@ -15,7 +15,7 @@ $#      dt      lcdt      beam     npltc    psetid
 5.00000E-6         0         0         0         0
 *BOUNDARY_SPC_SET_BIRTH_DEATH
 $#    nsid       cid      dofx      dofy      dofz     dofrx     dofry     dofrz
-         1         0         0         0         1         1         1         0
+         1         0         0         1         0         1         0         1
 $#   birth     death
        0.0       0.0
 *SET_NODE_LIST_TITLE
@@ -48,7 +48,7 @@ $#    nid1      nid2      nid3      nid4      nid5      nid6      nid7      nid8
       3307      3308      3309      3310      3311      3312         0         0
 *BOUNDARY_SPC_SET_BIRTH_DEATH
 $#    nsid       cid      dofx      dofy      dofz     dofrx     dofry     dofrz
-         2         0         0         0         1         1         1         0
+         2         0         0         1         0         1         0         1
 $#   birth     death
        0.0       0.0
 *SET_NODE_LIST_TITLE
