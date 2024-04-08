@@ -1,5 +1,5 @@
 $# LS-DYNA Keyword file created by LS-PrePost(R) V4.10.5-23Jun2023
-$# Created on Apr-8-2024 (20:10:06)
+$# Created on Apr-8-2024 (21:12:04)
 *KEYWORD
 *TITLE
 $#                                                                         title
@@ -96,61 +96,120 @@ $#     cmo      con1      con2
        1.0         7         7
 $#lco or a1        a2        a3        v1        v2        v3
        0.0       0.0       0.0       0.0       0.0       0.0
+*MAT_RIGID
+$#     mid        ro         e        pr         n    couple         m     alias
+         4   0.002649.70000E10      0.31       0.0       0.0       0.0          
+$#     cmo      con1      con2
+       1.0         7         7
+$#lco or a1        a2        a3        v1        v2        v3
+       0.0       0.0       0.0       0.0       0.0       0.0
+*MAT_RIGID
+$#     mid        ro         e        pr         n    couple         m     alias
+         5   0.002649.70000E10      0.31       0.0       0.0       0.0          
+$#     cmo      con1      con2
+       1.0         7         7
+$#lco or a1        a2        a3        v1        v2        v3
+       0.0       0.0       0.0       0.0       0.0       0.0
+*MAT_RIGID
+$#     mid        ro         e        pr         n    couple         m     alias
+         6   0.002649.70000E10      0.31       0.0       0.0       0.0          
+$#     cmo      con1      con2
+       1.0         7         7
+$#lco or a1        a2        a3        v1        v2        v3
+       0.0       0.0       0.0       0.0       0.0       0.0
+*MAT_RIGID
+$#     mid        ro         e        pr         n    couple         m     alias
+         7   0.002649.70000E10      0.31       0.0       0.0       0.0          
+$#     cmo      con1      con2
+       1.0         7         7
+$#lco or a1        a2        a3        v1        v2        v3
+       0.0       0.0       0.0       0.0       0.0       0.0
+*MAT_RIGID
+$#     mid        ro         e        pr         n    couple         m     alias
+         8   0.002649.70000E10      0.31       0.0       0.0       0.0          
+$#     cmo      con1      con2
+       1.0         7         7
+$#lco or a1        a2        a3        v1        v2        v3
+       0.0       0.0       0.0       0.0       0.0       0.0
+*MAT_RIGID
+$#     mid        ro         e        pr         n    couple         m     alias
+         9   0.002649.70000E10      0.31       0.0       0.0       0.0          
+$#     cmo      con1      con2
+       1.0         7         7
+$#lco or a1        a2        a3        v1        v2        v3
+       0.0       0.0       0.0       0.0       0.0       0.0
+*MAT_RIGID
+$#     mid        ro         e        pr         n    couple         m     alias
+        10   0.002649.70000E10      0.31       0.0       0.0       0.0          
+$#     cmo      con1      con2
+       1.0         7         7
+$#lco or a1        a2        a3        v1        v2        v3
+       0.0       0.0       0.0       0.0       0.0       0.0
+*MAT_RIGID
+$#     mid        ro         e        pr         n    couple         m     alias
+        11   0.002649.70000E10      0.31       0.0       0.0       0.0          
+$#     cmo      con1      con2
+       1.0         7         7
+$#lco or a1        a2        a3        v1        v2        v3
+       0.0       0.0       0.0       0.0       0.0       0.0
 *PART
 $#                                                                         title
 Top Augment - Solid
 $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
-         1         0         0         0         0         0         0         0
+         1         1         6         0         0         0         0         0
+*SECTION_SOLID
+$#   secid    elform       aet    unused    unused    unused    cohoff   gaskeit
+         1         1         0                                     0.0       0.0
 *PART
 $#                                                                         title
 Bottom Augmented - Solid
 $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
-         2         0         0         0         0         0         0         0
+         2         1         7         0         0         0         0         0
 *PART
 $#                                                                         title
 Top Neodynium
 $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
-         3         0         0         0         0         0         0         0
+         3         1         8         0         0         0         0         0
 *PART
 $#                                                                         title
 Bottom Neodynium
 $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
-         4         0         0         0         0         0         0         0
+         4         1         9         0         0         0         0         0
 *PART
 $#                                                                         title
 Armature
 $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
-         5         0         0         0         0         0         0         0
+         5         1         1         0         0         0         0         0
 *PART
 $#                                                                         title
 Copper Rail - Left Inward
 $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
-         6         0         0         0         0         0         0         0
+         6         1         2         0         0         0         0         0
 *PART
 $#                                                                         title
 Copper Rail - Left Outward
 $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
-         7         0         0         0         0         0         0         0
+         7         1         4         0         0         0         0         0
 *PART
 $#                                                                         title
 Copper Rail - Right Inward
 $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
-         8         0         0         0         0         0         0         0
+         8         1         3         0         0         0         0         0
 *PART
 $#                                                                         title
 Copper Rail - Right Outward
 $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
-         9         0         0         0         0         0         0         0
+         9         1         5         0         0         0         0         0
 *PART
 $#                                                                         title
 First Rail Connector
 $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
-        10         0         0         0         0         0         0         0
+        10         1        10         0         0         0         0         0
 *PART
 $#                                                                         title
 Last Rail Connector
 $#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
-        11         0         0         0         0         0         0         0
+        11         1        11         0         0         0         0         0
 *DEFINE_CURVE
 $#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
          4         0     0.001   1000000       0.0       0.0         0         0
@@ -20302,9 +20361,6 @@ $#   nid               x               y               z      tc      rc
    28277            40.8    9.536743e-07      -0.3612625       0       0
    28278            40.8    9.536743e-07       0.0059874       0       0
    28279            40.8    9.536743e-07       0.3714534       0       0
-*SECTION_SOLID
-$#   secid    elform       aet    unused    unused    unused    cohoff   gaskeit
-         1         1         0                                     0.0       0.0
 *SET_SEGMENT_TITLE
 Input Current
 $#     sid       da1       da2       da3       da4    solver       its         -
@@ -20338,18 +20394,18 @@ Imposed Current
 $#     sid       da1       da2       da3       da4    solver       its         -
          3       0.0       0.0       0.0       0.0MECH               0          
 $#      n1        n2        n3        n4        a1        a2        a3        a4
-     28259     28265     28274     28260       0.0       0.0       0.0       0.0
-     28261     28260     28274     28276       0.0       0.0       0.0       0.0
-     28263     28262     28275     28270       0.0       0.0       0.0       0.0
-     28269     28264     28263     28270       0.0       0.0       0.0       0.0
-     28265     28266     28273     28274       0.0       0.0       0.0       0.0
-     28266     28267     28272     28273       0.0       0.0       0.0       0.0
-     28267     28268     28271     28272       0.0       0.0       0.0       0.0
-     28268     28269     28270     28271       0.0       0.0       0.0       0.0
-     28271     28270     28275     28277       0.0       0.0       0.0       0.0
-     28272     28271     28277     28278       0.0       0.0       0.0       0.0
-     28273     28272     28278     28279       0.0       0.0       0.0       0.0
-     28274     28273     28279     28276       0.0       0.0       0.0       0.0
+     13756     13841     12504     12449       0.0       0.0       0.0       0.0
+     14605     14604     13576     12270       0.0       0.0       0.0       0.0
+     13854     13794     12468     12517       0.0       0.0       0.0       0.0
+     14654     14655     13083     13601       0.0       0.0       0.0       0.0
+     13841     13879     12542     12504       0.0       0.0       0.0       0.0
+     13854     12517     12542     13879       0.0       0.0       0.0       0.0
+     14604     14712     13634     13576       0.0       0.0       0.0       0.0
+     14737     14654     13601     13659       0.0       0.0       0.0       0.0
+     14712     14763     13685     13634       0.0       0.0       0.0       0.0
+     14763     14737     13659     13685       0.0       0.0       0.0       0.0
+     13755     13756     12449     12374       0.0       0.0       0.0       0.0
+     13794     13793     12406     12468       0.0       0.0       0.0       0.0
 *EM_CONTROL
 $#   emsol     numls   macrodt   dimtype    nperio         -   ncylfem   ncylbem
          1       100       0.0         0         2                5000      5000
@@ -20370,13 +20426,16 @@ $#    mats      matf      sols      solf      mesh       mem    timing
          2         2         2         2         1         1         1
 *EM_SOLVER_BEM
 $#  reltol    maxite     stype    precon   uselast  ncyclbem
-1.00000E-6      1000         2         2         1      1000
+1.00000E-6      1000         2         2         1         3
 *EM_SOLVER_BEMMAT
 $#   matid    unused    unused    unused    unused    unused    unused    reltol
          1                                                            1.00000E-6
 *EM_SOLVER_FEM
 $#  reltol    maxite     stype    precon   uselast  ncyclfem
-1.00000E-6      1000         1         1         1      5000
+     0.001      1000         1         1         1         3
+*EM_SOLVER_BEMMAT
+$#   matid    unused    unused    unused    unused    unused    unused    reltol
+         2                                                            1.00000E-6
 *EM_MAT_001
 $#     mid     mtype     sigma     eosid    unused  eplambda    deatht   rdltype
          1         2      25.0         0                 0.01.00000E28         0
