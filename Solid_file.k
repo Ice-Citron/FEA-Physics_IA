@@ -1,60 +1,121 @@
 $# LS-DYNA Keyword file created by LS-PrePost(R) V4.10.5-23Jun2023
-$# Created on Apr-8-2024 (01:14:55)
+$# Created on Apr-8-2024 (18:43:16)
 *KEYWORD
 *TITLE
 $#                                                                         title
 LS-DYNA keyword deck by LS-PrePost
 *CONTROL_TERMINATION
+$#  endtim    endcyc     dtmin    endeng    endmas     nosol
 1.00000E-6         0       0.0       0.01.000000E8         0
 *CONTROL_TIMESTEP
+$#  dtinit    tssfac      isdo    tslimt     dt2ms      lctm     erode     ms1st
        0.0       0.0         0       0.0       0.0         4         0         0
 *DATABASE_BINARY_D3PLOT
+$#      dt      lcdt      beam     npltc    psetid
        0.0         4         0         0         0
 *BOUNDARY_SPC_SET_BIRTH_DEATH
+$#    nsid       cid      dofx      dofy      dofz     dofrx     dofry     dofrz
          1         0         0         0         0         0         0         0
+$#   birth     death
        0.01.00000E20
+*SET_NODE_LIST_TITLE
+NODESET(SPC) 1
+$#     sid       da1       da2       da3       da4    solver       its         -
+         1       0.0       0.0       0.0       0.0MECH      1                  
+$#    nid1      nid2      nid3      nid4      nid5      nid6      nid7      nid8
+     12885     12886     12887     12888     12889     12890     12891     12892
+     12893     12894     12895     12896     12897     12898     12899     12900
+     12901     12902     12903     12904     12905     12906     12907     12908
+     12909     12910     12911     12912     12913     12914     12915     12916
+     12917     12918     12919     12920     12921     12922     12923     12924
+     12925     12926     12927     12928     12929     12930     12931     12932
+     12933     12934     12935     12936     12937     12938     12939     12940
+     12941     12942     12943     12944     12945     12946     12947     12948
+     12949     12950     12951     12952     12953     12954     12955     12956
+     12957     12958     12959     12960     12961     12962     12963     12964
+     12965     12966     12967     12968     12969     12970     12971     12972
+     12973     12974     12975     12976     12977     12978     12979     12980
+     12981     12982     12983     12984     12985     12986     12987     12988
+     12989     12990     12991     12992     12993     12994     12995     12996
+     12997     12998     12999     13000     13001     13002     13003     13004
+     13005     13006     13007     13008     13009     13010     13011     13012
+     13013     13014     13015     13016     13017     13018     13019     13020
+     13021     13022     13023     13024     13025     13026     13027     13028
+     13029     13030     13031     13032     13033     13034     13035     13036
+     13037     13038     13039     13040     13041     13042     13043     13044
+     13045     13046     13047     13048     13049     13050     13051     13052
+     13053     13054     13055     13056     13057     13058     13059     13060
+     13061     13062     13063     13064     13065     13066         0         0
 *MAT_ELASTIC
+$#     mid        ro         e        pr        da        db  not used
          1       0.0       0.0       0.0       0.0       0.0       0.0
 *MAT_RIGID
+$#     mid        ro         e        pr         n    couple         m     alias
          2       0.0       0.0       0.0       0.0       0.0       0.0          
+$#     cmo      con1      con2
        0.0         0         0
+$#lco or a1        a2        a3        v1        v2        v3
        0.0       0.0       0.0       0.0       0.0       0.0
 *PART
+$#                                                                         title
 Top Augment - Solid
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
          1         0         0         0         0         0         0         0
 *PART
+$#                                                                         title
 Bottom Augmented - Solid
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
          2         0         0         0         0         0         0         0
 *PART
+$#                                                                         title
 Top Neodynium
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
          3         0         0         0         0         0         0         0
 *PART
+$#                                                                         title
 Bottom Neodynium
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
          4         0         0         0         0         0         0         0
 *PART
+$#                                                                         title
 Armature
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
          5         0         0         0         0         0         0         0
 *PART
+$#                                                                         title
 Copper Rail - Left Inward
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
          6         0         0         0         0         0         0         0
 *PART
+$#                                                                         title
 Copper Rail - Left Outward
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
          7         0         0         0         0         0         0         0
 *PART
+$#                                                                         title
 Copper Rail - Right Inward
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
          8         0         0         0         0         0         0         0
 *PART
+$#                                                                         title
 Copper Rail - Right Outward
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
          9         0         0         0         0         0         0         0
 *PART
+$#                                                                         title
 First Rail Connector
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
         10         0         0         0         0         0         0         0
 *PART
+$#                                                                         title
 Last Rail Connector
+$#     pid     secid       mid     eosid      hgid      grav    adpopt      tmid
         11         0         0         0         0         0         0         0
 *DEFINE_CURVE
+$#    lcid      sidr       sfa       sfo      offa      offo    dattyp     lcint
          4         0       1.0       1.0       0.0       0.0         0         0
 *ELEMENT_SOLID
+$#   eid     pid      n1      n2      n3      n4      n5      n6      n7      n8
      985       1    1977    1978    1979    1980      10      13      15      11
      986       1    1981    1982    1983    1984      18    1546       3      19
      987       1    1985    1986    1987    1988       9       8     451      14
@@ -5376,6 +5437,7 @@ Last Rail Connector
     6385       7   15539   15549   15577   15561   15540   15550   15578   15562
     6386       7   15540   15550   15578   15562   15067   15072   15086   15078
 *NODE
+$#   nid               x               y               z      tc      rc
        3        43.00002       -6.012758            10.0       0       0
        4        43.00002       -4.179425            10.0       0       0
        6        43.00002      -0.5127583            10.0       0       0
@@ -20166,29 +20228,136 @@ Last Rail Connector
    15588            -2.0           -19.0             1.0       0       0
    15589            14.0           -19.0            -1.0       0       0
    15590            14.0           -19.0             1.0       0       0
+   28259            40.0    9.536743e-07             1.1       0       0
+   28260            40.4    9.536743e-07             1.1       0       0
+   28261            40.8    9.536743e-07             1.1       0       0
+   28262            40.8    9.536743e-07            -1.1       0       0
+   28263            40.4    9.536743e-07            -1.1       0       0
+   28264            40.0    9.536743e-07            -1.1       0       0
+   28265            40.0    9.536743e-07       0.7333334       0       0
+   28266            40.0    9.536743e-07       0.3666667       0       0
+   28267            40.0    9.536743e-07    1.110223e-16       0       0
+   28268            40.0    9.536743e-07      -0.3666667       0       0
+   28269            40.0    9.536743e-07      -0.7333334       0       0
+   28270            40.4    9.536743e-07      -0.7314958       0       0
+   28271            40.4    9.536743e-07      -0.3636992       0       0
+   28272            40.4    9.536743e-07       0.0031621       0       0
+   28273            40.4    9.536743e-07       0.3692811       0       0
+   28274            40.4    9.536743e-07       0.7346937       0       0
+   28275            40.8    9.536743e-07      -0.7298304       0       0
+   28276            40.8    9.536743e-07       0.7361521       0       0
+   28277            40.8    9.536743e-07      -0.3612625       0       0
+   28278            40.8    9.536743e-07       0.0059874       0       0
+   28279            40.8    9.536743e-07       0.3714534       0       0
 *SECTION_SOLID
+$#   secid    elform       aet    unused    unused    unused    cohoff   gaskeit
          1         1         0                                     0.0       0.0
+*SET_NODE_LIST_TITLE
+NODESET(SPC) 2 
+$#     sid       da1       da2       da3       da4    solver       its         -
+         2       0.0       0.0       0.0       0.0MECH      1                  
+$#    nid1      nid2      nid3      nid4      nid5      nid6      nid7      nid8
+     12129     12130     12131     12132     12133     12134     12135     12136
+     12137     12138     12139     12140     12141     12142     12143     12144
+     12145     12146     12147     12148     12149     12150     12151     12152
+     12153     12154     13209     13210     13211     13212     13213     13214
+     13215     13216     13217     13218     13219     13220     13221     13222
+     13298     13299     13300     13301     13302     13303     13304     13305
+     13306     13307     13308     13309     13325     13326     13327     13328
+     13329     13355     13356     13357     13358     13359     13360     13361
+     13362     13363     13364     13365     13366     13367     13368     13369
+     13370     13371     13372     13373     13374     13375     13376     13377
+     13378     13379     13380     13381     13382     13383     13384     13385
+     13386     13387     13388     13389     13390     13391     13392     13393
+     13394     13395     13396     13397     13398     13399     13400     13401
+     13402     13403     13404     13405     13406     13407     13408     13409
+     13410     13411     13412     13413     13414     13415     13416     13417
+     13418     13419     13420     13421     13422     13423     13424     13425
+     13426     13427     13428     13429     13430     13431     13432     13433
+     13434     13435     13436     13437     13438     13439     13440     13441
+     13442     13443     13444     13445     13446     13447     13448     13449
+     13450     13451     13452     13453     13454     13455     13456     13457
+     13458     13459     13460     13461     13462     13463     13464     13465
+     13466     13467     13468     13469     13470     13471     13472     13473
+     13474     13475     13476     13477     13478     13479         0         0
+*SET_SEGMENT_TITLE
+Input Current
+$#     sid       da1       da2       da3       da4    solver       its         -
+         1       0.0       0.0       0.0       0.0MECH               0          
+$#      n1        n2        n3        n4        a1        a2        a3        a4
+      8995      9006      9513      9003       0.0       0.0       0.0       0.0
+      9004      9515      9009      8996       0.0       0.0       0.0       0.0
+      9513      9514      9516      9515       0.0       0.0       0.0       0.0
+      9003      9513      9515      9004       0.0       0.0       0.0       0.0
+      9005      8997      9007      9514       0.0       0.0       0.0       0.0
+      9006      9005      9514      9513       0.0       0.0       0.0       0.0
+      9516      9008      8998      9010       0.0       0.0       0.0       0.0
+      9514      9007      9008      9516       0.0       0.0       0.0       0.0
+      9515      9516      9010      9009       0.0       0.0       0.0       0.0
+*SET_SEGMENT_TITLE
+Output Current
+$#     sid       da1       da2       da3       da4    solver       its         -
+         2       0.0       0.0       0.0       0.0MECH               0          
+$#      n1        n2        n3        n4        a1        a2        a3        a4
+      8695      8693      8694      8696       0.0       0.0       0.0       0.0
+      8694      8193      8180      8187       0.0       0.0       0.0       0.0
+      8696      8188      8179      8190       0.0       0.0       0.0       0.0
+      8696      8694      8187      8188       0.0       0.0       0.0       0.0
+      8192      8695      8189      8181       0.0       0.0       0.0       0.0
+      8695      8696      8190      8189       0.0       0.0       0.0       0.0
+      8191      8182      8194      8693       0.0       0.0       0.0       0.0
+      8192      8191      8693      8695       0.0       0.0       0.0       0.0
+      8693      8194      8193      8694       0.0       0.0       0.0       0.0
+*SET_SEGMENT_TITLE
+Imposed Current
+$#     sid       da1       da2       da3       da4    solver       its         -
+         3       0.0       0.0       0.0       0.0MECH               0          
+$#      n1        n2        n3        n4        a1        a2        a3        a4
+     28259     28265     28274     28260       0.0       0.0       0.0       0.0
+     28261     28260     28274     28276       0.0       0.0       0.0       0.0
+     28263     28262     28275     28270       0.0       0.0       0.0       0.0
+     28269     28264     28263     28270       0.0       0.0       0.0       0.0
+     28265     28266     28273     28274       0.0       0.0       0.0       0.0
+     28266     28267     28272     28273       0.0       0.0       0.0       0.0
+     28267     28268     28271     28272       0.0       0.0       0.0       0.0
+     28268     28269     28270     28271       0.0       0.0       0.0       0.0
+     28271     28270     28275     28277       0.0       0.0       0.0       0.0
+     28272     28271     28277     28278       0.0       0.0       0.0       0.0
+     28273     28272     28278     28279       0.0       0.0       0.0       0.0
+     28274     28273     28279     28276       0.0       0.0       0.0       0.0
 *EM_CONTROL
+$#   emsol     numls   macrodt   dimtype    nperio         -   ncylfem   ncylbem
         -1       100       0.0         0         2                   3         3
 *EM_CONTROL_CONTACT
+$#    emct    cconly     ctype    cotype      eps1      eps2      eps3        d0
          1         0         0         0       0.3       0.3       0.3       0.0
 *EM_DATABASE_CIRCUIT
+$#   outlv     dtout
          1       0.0
 *EM_DATABASE_GLOBALENERGY
+$#   outlv     dtout
          1       0.0
 *EM_DATABASE_PARTDATA
+$#   outlv     dtout
          1       0.0
 *EM_OUTPUT
+$#    mats      matf      sols      solf      mesh       mem    timing
          0         0         0         0         0         1         0
 *EM_SOLVER_BEM
+$#  reltol    maxite     stype    precon   uselast  ncyclbem
 1.00000E-6      1000         2         2         1      1000
 *EM_SOLVER_BEMMAT
+$#   matid    unused    unused    unused    unused    unused    unused    reltol
          1                                                            1.00000E-6
 *EM_SOLVER_FEM
+$#  reltol    maxite     stype    precon   uselast  ncyclfem
 1.00000E-6      1000         1         1         1      5000
 *EM_MAT_001
+$#     mid     mtype     sigma     eosid    unused  eplambda    deatht   rdltype
          1         0       0.0         0                 0.01.00000E28         0
 *EM_CIRCUIT
+$#  circid   circtyp      lcid       r/f       l/a      c/t0        v0        t0
          1         1         0       0.0       0.0       0.0       0.0       0.0
+$# sidcurr    sidvin   sidvout    partid
          0         0         0         0
 *END
